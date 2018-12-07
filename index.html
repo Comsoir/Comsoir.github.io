@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mfc-dashboard</title>
     <base href="http://localhost:8080/">
-    <link rel="stylesheet" href="/style.2cd9afd9e7b54668dc98.css?53304bb45fce285617c8">
+    <link rel="stylesheet" href="/style.01fcc594003c040b0f0e.css?e6660e8198f0a92924f5">
 </head>
 <body>
 
@@ -148,16 +148,16 @@
         <div class="uk-container uk-container-expand">
             <div class="uk-grid uk-grid-divider uk-grid-medium uk-child-width-1-2 uk-child-width-1-4@l uk-child-width-1-5@xl" data-uk-grid>
                 <div>
-                    <span class="uk-text-small"><span data-uk-icon="icon:users" class="uk-margin-small-right uk-text-primary"></span>Новые обращения</span>
-                    <h1 class="uk-heading-primary uk-margin-remove  uk-text-primary">12.134</h1>
+                    <span class="uk-text-small"><span data-uk-icon="icon:users" class="uk-margin-small-right text-main"></span>Новые обращения</span>
+                    <h1 class="uk-heading-primary uk-margin-remove  text-main">12.134</h1>
                     <div class="uk-text-small">
                         <span class="uk-text-success" data-uk-icon="icon: triangle-up">15%</span> за поледнюю неделю.
                     </div>
                 </div>
                 <div>
 
-                    <span class="uk-text-small"><span data-uk-icon="icon:social" class="uk-margin-small-right uk-text-primary"></span>Просмотренно</span>
-                    <h1 class="uk-heading-primary uk-margin-remove uk-text-primary">6000</h1>
+                    <span class="uk-text-small"><span data-uk-icon="icon:social" class="uk-margin-small-right text-main"></span>Просмотренно</span>
+                    <h1 class="uk-heading-primary uk-margin-remove text-main">6000</h1>
                     <div class="uk-text-small">
                         <span class="uk-text-success" data-uk-icon="icon: triangle-up">2%</span> за поледнюю неделю.
                     </div>
@@ -165,8 +165,8 @@
                 </div>
                 <div>
 
-                    <span class="uk-text-small"><span data-uk-icon="icon:clock" class="uk-margin-small-right uk-text-primary"></span>Трафик посещения</span>
-                    <h1 class="uk-heading-primary uk-margin-remove uk-text-primary">14.00<small class="uk-text-small">Дня</small></h1>
+                    <span class="uk-text-small"><span data-uk-icon="icon:clock" class="uk-margin-small-right text-main"></span>Трафик посещения</span>
+                    <h1 class="uk-heading-primary uk-margin-remove text-main">14.00<small class="uk-text-small">Дня</small></h1>
                     <div class="uk-text-small">
                         <span class="uk-text-success" data-uk-icon="icon: triangle-up"> 2%</span> за последнюю неделю.
                     </div>
@@ -174,16 +174,16 @@
                 </div>
                 <div>
 
-                    <span class="uk-text-small"><span data-uk-icon="icon:tag" class="uk-margin-small-right uk-text-primary"></span>Обработанные</span>
-                    <h1 class="uk-heading-primary uk-margin-remove uk-text-primary">1.543</h1>
+                    <span class="uk-text-small"><span data-uk-icon="icon:tag" class="uk-margin-small-right text-main"></span>Обработанные</span>
+                    <h1 class="uk-heading-primary uk-margin-remove text-main">1.543</h1>
                     <div class="uk-text-small">
                         <span class="uk-text-danger" data-uk-icon="icon: triangle-down"> -13%</span> за последнюю неделю.
                     </div>
 
                 </div>
                 <div class="uk-visible@xl">
-                    <span class="uk-text-small"><span data-uk-icon="icon:users" class="uk-margin-small-right uk-text-primary"></span>Lorem ipsum</span>
-                    <h1 class="uk-heading-primary uk-margin-remove uk-text-primary">5.284</h1>
+                    <span class="uk-text-small"><span data-uk-icon="icon:users" class="uk-margin-small-right text-main"></span>Lorem ipsum</span>
+                    <h1 class="uk-heading-primary uk-margin-remove text-main">5.284</h1>
                     <div class="uk-text-small">
                         <span class="uk-text-success" data-uk-icon="icon: triangle-up"> 7%</span> more than last week.
                     </div>
@@ -234,69 +234,41 @@
                     </div>
                 </div>
                 <!-- /panel -->
-                <!-- panel -->
-                <div class="uk-width-1-1 uk-width-1-3@l uk-width-1-2@xl">
-                    <div class="uk-card uk-card-default uk-card-small uk-card-hover">
-                        <div class="uk-card-header">
-                            <div class="uk-grid uk-grid-small">
-                                <div class="uk-width-auto"><h4>Activity Chart</h4></div>
-                                <div class="uk-width-expand uk-text-right panel-icons">
-                                    <a href="#" class="uk-icon-link" title="Move" data-uk-tooltip data-uk-icon="icon: move"></a>
-                                    <a href="#" class="uk-icon-link" title="Configuration" data-uk-tooltip data-uk-icon="icon: cog"></a>
-                                    <a href="#" class="uk-icon-link" title="Close" data-uk-tooltip data-uk-icon="icon: close"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="uk-card-body">
-                            <div class="chart-container">
-                                <canvas id="chart3"></canvas>
-                            </div>
-                        </div>
-                    </div>
+               <!--table-->
+                <div class="uk-width-1-1@m">
+                    <table class="uk-table uk-table-justify uk-table-divider">
+                        <thead>
+                        <tr>
+                            <th class="uk-width-small">Отметка времени</th>
+                            <th>Ваш Филиал</th>
+                            <th>Автор обращения (Ф.И.О.)</th>
+                            <th>Контактный телефон (мобильный без тире и пробелов)</th>
+                            <th>Тип проблемы</th>
+                            <th>Описание проблемы (опишите суть проблемы, количество и т.д.)</th>
+                            <th>Фото (прикрепите фото проблемы)</th>
+                            <th>Что сделано/План</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Table Data</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                            <td><button class="uk-button uk-button-default" type="button">Button</button></td>
+                        </tr>
+                        <tr>
+                            <td>Table Data</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                            <td><button class="uk-button uk-button-default" type="button">Button</button></td>
+                        </tr>
+                        <tr>
+                            <td>Table Data</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                            <td><button class="uk-button uk-button-default" type="button">Button</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <!-- /panel -->
-                <!-- panel -->
-                <div class="uk-width-1-2@s uk-width-1-3@l uk-width-1-4@xl">
-                    <div class="uk-card uk-card-default uk-card-small uk-card-hover">
-                        <div class="uk-card-header">
-                            <div class="uk-grid uk-grid-small">
-                                <div class="uk-width-auto"><h4>Distribution Chart</h4></div>
-                                <div class="uk-width-expand uk-text-right panel-icons">
-                                    <a href="#" class="uk-icon-link" title="Move" data-uk-tooltip data-uk-icon="icon: move"></a>
-                                    <a href="#" class="uk-icon-link" title="Configuration" data-uk-tooltip data-uk-icon="icon: cog"></a>
-                                    <a href="#" class="uk-icon-link" title="Close" data-uk-tooltip data-uk-icon="icon: close"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="uk-card-body">
-                            <div class="chart-container">
-                                <canvas id="chart4"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /panel -->
-                <!-- panel -->
-                <div class="uk-width-1-2@s uk-width-1-3@l uk-width-1-4@xl">
-                    <div class="uk-card uk-card-default uk-card-small uk-card-hover">
-                        <div class="uk-card-header">
-                            <div class="uk-grid uk-grid-small">
-                                <div class="uk-width-auto"><h4>Population Chart</h4></div>
-                                <div class="uk-width-expand uk-text-right panel-icons">
-                                    <a href="#" class="uk-icon-link" title="Move" data-uk-tooltip data-uk-icon="icon: move"></a>
-                                    <a href="#" class="uk-icon-link" title="Configuration" data-uk-tooltip data-uk-icon="icon: cog"></a>
-                                    <a href="#" class="uk-icon-link" title="Close" data-uk-tooltip data-uk-icon="icon: close"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="uk-card-body">
-                            <div class="chart-container">
-                                <canvas id="chart5"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /panel -->
+                <!--/table-->
             </div>
             <footer class="uk-section uk-section-small uk-text-center">
 
@@ -331,6 +303,6 @@
     <!-- /OFFCANVAS -->
 </div>
 
-<script src="/main.c45f093fa5d38b6e8e45.js?53304bb45fce285617c8"></script>
+<script src="/main.429642953db46e5f0128.js?e6660e8198f0a92924f5"></script>
 </body>
 </html>
