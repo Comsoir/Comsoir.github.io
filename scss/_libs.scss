@@ -1,0 +1,30 @@
+// 1. Your custom variables and variable overwrites.
+$global-link-color: #0090d3;
+
+// 2. Import default variables and available mixins.
+@import "../../node_modules/uikit/src/scss/variables-theme.scss";
+@import "../../node_modules/uikit/src/scss/mixins-theme.scss";
+
+
+// 4. Import UIkit.
+@import "../../node_modules/uikit/src/scss/uikit-theme.scss";
+
+$white : white;
+$navbar-dropdown-color: $white;
+
+.uk-navbar-nav {
+  li:hover {
+    a:hover {
+      color: green !important;
+      transition: ease-in-out 0.5s !important;
+    }
+  }
+}
+.uk-navbar-nav {
+  li {
+    a {
+      color: black!important;
+    }
+  }
+}
+
