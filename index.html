@@ -1,307 +1,395 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mfc-dashboard</title>
-    <link rel="stylesheet" href="/style.01fcc594003c040b0f0e.css?e6660e8198f0a92924f5">
+
+    <meta charset="utf-8">
+    <!-- <base href="/"> -->
+
+    <title>iTech</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <!-- Template Basic Images End -->
+
+    <!-- Custom Browsers Color Start -->
+    <meta name="theme-color" content="#000">
+    <!-- Custom Browsers Color End -->
+
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
+          integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+
 </head>
+
 <body>
 
-<div class="uk-offcanvas-content">
-    <!--HEADER-->
-    <header id="top-head" class="uk-position-fixed">
-        <div class="uk-container uk-container-expand" style="background: #C79C65">
-            <nav class="uk-navbar uk-light" data-uk-navbar="mode:click; duration: 250">
-                <div class="uk-navbar-left">
-                    <div class="uk-navbar-item uk-hidden@m">
-                        <a class="uk-logo" href="#"><img class="custom-logo" src="img/logo1.png" alt="logo_mfc"></a>
-                    </div>
-                    <ul class="uk-navbar-nav uk-visible@m">
-                        <li><a href="#">Аккаунт</a></li>
-                        <li>
-                            <a href="#">Настройки <span data-uk-icon="icon: triangle-down"></span></a>
-                            <div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li class="uk-nav-header">YOUR ACCOUNT</li>
-                                    <li><a href="#"><span data-uk-icon="icon: info"></span> Summary</a></li>
-                                    <li><a href="#"><span data-uk-icon="icon: refresh"></span> Edit</a></li>
-                                    <li><a href="#"><span data-uk-icon="icon: settings"></span> Configuration</a></li>
-                                    <li class="uk-nav-divider"></li>
-                                    <li><a href="#"><span data-uk-icon="icon: image"></span> Your Data</a></li>
-                                    <li class="uk-nav-divider"></li>
-                                    <li><a href="#"><span data-uk-icon="icon: sign-out"></span> Logout</a></li>
-                                </ul>
+<header class="header" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+    <nav id="navbar" data-uk-navbar="mode: click;" class="uk-navbar">
+        <div class="uk-navbar-left nav-overlay uk-visible@m ">
+            <ul class="uk-navbar-nav">
+                <li>
+                    <a href="#" title="Subscribe">Главная</a>
+                </li>
+                <li>
+                    <a href="#" title="Sign Up">Прайс</a>
+                </li>
+                <li>
+                    <a href="#" title="Sign Up">Контакты</a>
+                </li>
+                <li>
+                    <a href="#" title="Sign Up">О Нас</a>
+                </li>
+            </ul>
+        </div>
+        <div class="uk-navbar-center nav-overlay">
+            <a class="uk-navbar-item logo" href="#" title="Logo"><img src="img/@1x/logo_ithech.jpg" alt="Logo"></a>
+        </div>
+        <div class="uk-navbar-right nav-overlay">
+            <ul class="uk-navbar-nav">
+                <li><a class="uk-visible@s uk-icon" style="margin-right: 4px" href="#" data-uk-icon="facebook">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                         data-svg="facebook">
+                        <path d="M11,10h2.6l0.4-3H11V5.3c0-0.9,0.2-1.5,1.5-1.5H14V1.1c-0.3,0-1-0.1-2.1-0.1C9.6,1,8,2.4,8,5v2H5.5v3H8v8h3V10z"></path>
+                    </svg>
+                </a>
+                </li>
+                <li><a class="uk-visible@s uk-icon" style="margin-right: 4px" href="#" data-uk-icon="twitter">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                         data-svg="twitter">
+                        <path d="M19,4.74 C18.339,5.029 17.626,5.229 16.881,5.32 C17.644,4.86 18.227,4.139 18.503,3.28 C17.79,3.7 17.001,4.009 16.159,4.17 C15.485,3.45 14.526,3 13.464,3 C11.423,3 9.771,4.66 9.771,6.7 C9.771,6.99 9.804,7.269 9.868,7.539 C6.795,7.38 4.076,5.919 2.254,3.679 C1.936,4.219 1.754,4.86 1.754,5.539 C1.754,6.82 2.405,7.95 3.397,8.61 C2.79,8.589 2.22,8.429 1.723,8.149 L1.723,8.189 C1.723,9.978 2.997,11.478 4.686,11.82 C4.376,11.899 4.049,11.939 3.713,11.939 C3.475,11.939 3.245,11.919 3.018,11.88 C3.49,13.349 4.852,14.419 6.469,14.449 C5.205,15.429 3.612,16.019 1.882,16.019 C1.583,16.019 1.29,16.009 1,15.969 C2.635,17.019 4.576,17.629 6.662,17.629 C13.454,17.629 17.17,12 17.17,7.129 C17.17,6.969 17.166,6.809 17.157,6.649 C17.879,6.129 18.504,5.478 19,4.74"></path>
+                    </svg>
+                </a>
+                </li>
+                <li><a class="uk-visible@s uk-icon" style="margin-right: 4px" href="#" data-uk-icon="instagram">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                         data-svg="instagram">
+                        <path d="M13.55,1H6.46C3.45,1,1,3.44,1,6.44v7.12c0,3,2.45,5.44,5.46,5.44h7.08c3.02,0,5.46-2.44,5.46-5.44V6.44 C19.01,3.44,16.56,1,13.55,1z M17.5,14c0,1.93-1.57,3.5-3.5,3.5H6c-1.93,0-3.5-1.57-3.5-3.5V6c0-1.93,1.57-3.5,3.5-3.5h8 c1.93,0,3.5,1.57,3.5,3.5V14z"></path>
+                        <circle cx="14.87" cy="5.26" r="1.09"></circle>
+                        <path d="M10.03,5.45c-2.55,0-4.63,2.06-4.63,4.6c0,2.55,2.07,4.61,4.63,4.61c2.56,0,4.63-2.061,4.63-4.61 C14.65,7.51,12.58,5.45,10.03,5.45L10.03,5.45L10.03,5.45z M10.08,13c-1.66,0-3-1.34-3-2.99c0-1.65,1.34-2.99,3-2.99s3,1.34,3,2.99 C13.08,11.66,11.74,13,10.08,13L10.08,13L10.08,13z"></path>
+                    </svg>
+                </a>
+                </li>
+                <li><a class="uk-navbar-toggle uk-hidden@m uk-icon uk-navbar-toggle-icon" data-uk-toggle=""
+                       data-uk-navbar-toggle-icon="" href="#offcanvas-nav">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                         data-svg="navbar-toggle-icon">
+                        <rect y="9" width="20" height="2"></rect>
+                        <rect y="3" width="20" height="2"></rect>
+                        <rect y="15" width="20" height="2"></rect>
+                    </svg>
+                </a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="nav-overlay uk-navbar-left uk-flex-1" hidden="">
+            <div class="uk-navbar-item uk-width-expand">
+                <form class="uk-search uk-search-navbar uk-width-1-1">
+                    <input class="uk-search-input" type="search" placeholder="Search...">
+                </form>
+            </div>
+            <a class="uk-navbar-toggle uk-icon uk-close" data-uk-close=""
+               data-uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#">
+                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"
+                     data-svg="close-icon">
+                    <line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line>
+                    <line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line>
+                </svg>
+            </a>
+        </div>
+    </nav>
+</header>
+<section class="bg uk-position-relative bg-second ">
+    <div class="uk-container">
+        <div class="uk-grid bg-content uk-light" uk-grid>
+            <div class="uk-width-1-2">
+                <h1 class="bg-content-h1">Ремонт компьютеров любой сложности</h1>
+                <p class="bg-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dicta dolor
+                    eligendi facilis id ipsum iure molestiae natus, nulla placeat quod, sed, similique soluta sunt vel?
+                    Alias aliquam cumque, eveniet fugit iste laboriosam, molestias natus necessitatibus, odit quis sed
+                    vitae?</p>
+            </div>
+            <div class="uk-width-1-2">
+                <img src="img/_src/laptope_018.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="chose uk-section  uk-section-small">
+    <div class="uk-container">
+        <div class="uk-text-center">
+            <h3 class="chose-h3">Почему выбирают нас</h3>
+            <span class="chose-span uk-display-block">Быстрый ремонт по лучшим ценам</span>
+        </div>
+
+        <div class="uk-grid uk-child-width-1-3@m uk-margin-large-top">
+            <div>
+                <div class="chose-card">
+                    <div class="chose-card__container">
+                        <div class="chose-card__container-icon">
+                            <span><i class="far fa-money-bill-alt"></i></span>
+                        </div>
+                        <div class="chose-card__container-text">
+                            <h4 class="box-title">No Fix No Fee</h4>
+                            <div>We are so confident with our service that if we can’t fix the problem, you don’t pay.
+                                All repairs come with a 30 day guarantee.
                             </div>
-                        </li>
-                    </ul>
-                    <div class="uk-navbar-item uk-visible@s">
-                        <form action="dashboard.html" class="uk-search uk-search-default">
-                            <span data-uk-search-icon></span>
-                            <input class="uk-search-input search-field" type="search" placeholder="Поиск">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="chose-card">
+                    <div class="chose-card__container">
+                        <div class="chose-card__container-icon">
+                            <span><i class="fas fa-wrench"></i></span>
+                        </div>
+                        <div class="chose-card__container-text">
+                            <h4 class="box-title">No Fix No Fee</h4>
+                            <div>We are so confident with our service that if we can’t fix the problem, you don’t pay.
+                                All repairs come with a 30 day guarantee.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="chose-card">
+                    <div class="chose-card__container">
+                        <div class="chose-card__container-icon">
+                            <span><i class="far fa-calendar-alt"></i></span>
+                        </div>
+                        <div class="chose-card__container-text">
+                            <h4 class="box-title">No Fix No Fee</h4>
+                            <div>We are so confident with our service that if we can’t fix the problem, you don’t pay.
+                                All repairs come with a 30 day guarantee.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact-body uk-section uk-section-small">
+    <div class="uk-container uk-text-center">
+        <div class="contact-div">
+            <h3 class="contact-div__h3">Get<span> Your Computer</span> Fixed NOW!</h3>
+            <a class="contact-div__a" href="tel:+1-800-1234567">+1-800-1234567</a>
+            <p class="contact-div__p">for one of our professional computer repair techs to help you with your Desktop,
+                Laptop, Mac or other inquiry</p>
+            <a class="uk-button uk-button-default" href="#modal-close-default" uk-toggle="target: #modal-close-default">Закажите
+                ремонт</a>
+            <a class="uk-button uk-button-default" href="">Контакты</a>
+        </div>
+    </div>
+</section>
+<section class="parallax uk-section uk-section-small">
+    <div class=" uk-background-cover uk-light " uk-parallax="bgy: -200"
+         style="background-image: url('img/_src/block-bg-1.jpg');">
+        <div class="uk-container">
+            <div class="uk-grid uk-child-width-1-1@m uk-text-center">
+                <h2 class=" contact-div__h3 uk-margin-large-top">All Computer <span>& Tablet Services</span></h2>
+            </div>
+            <div class="uk-grid uk-child-width-1-1@m uk-margin-small-top">
+                <p class="parallax-p">We can Solve your Hardware and Software Problems</p>
+            </div>
+            <div class="uk-grid uk-child-width-1-4@m uk-grid-small  uk-text-center">
+                <div class="icon">
+                    <div class="icon-wrapper">
+                    <span>
+                        <i class="fas fa-desktop"></i>
+                        <span class="icon-wrapper__hover"></span>
+                    </span>
+                        <h4 class="icon-wrapper__h4">Diagnosing Your Device</h4>
+                        <p class="icon-wrapper__p">We will diagnose your issues, provide you with options and give you a
+                            price for FREE!</p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <div class="icon-wrapper">
+                    <span>
+                        <i class="fas fa-microchip"></i>
+                        <span class="icon-wrapper__hover"></span>
+                    </span>
+                        <h4 class="icon-wrapper__h4">Hardware & Software Installation</h4>
+                        <p class="icon-wrapper__p">We can help you determine what hardware install or software
+                            installing solutions will fit your needs.</p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <div class="icon-wrapper">
+                    <span>
+                        <i class="far fa-hdd"></i>
+                        <span class="icon-wrapper__hover"></span>
+                    </span>
+                        <h4 class="icon-wrapper__h4">Professional Computer Repair</h4>
+                        <p class="icon-wrapper__p">We fix all sorts of computer issues! From software to hardware we
+                            have the solution!</p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <div class="icon-wrapper">
+                    <span>
+                        <i class="fas fa-user-shield"></i>
+                        <span class="icon-wrapper__hover"></span>
+                    </span>
+                        <h4 class="icon-wrapper__h4">Virus & Spyware Removal</h4>
+                        <p class="icon-wrapper__p">We work through a remote super-secure connection, and give you a full
+                            report when our work is done.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="block-contact uk-section uk-section-small">
+    <div class="uk-container">
+        <div class="uk-grid uk-child-width-1-2@m">
+            <div>
+                <h2 class="block-contact__h2">
+                    О
+                    <span> Нас</span>
+                </h2>
+                <p class="block-contact__p">
+                    Ваш местный специалист по обслуживанию компьютеров
+                </p>
+                <span class="block-contact__span">
+                   <span>ITech</span> посвящен обеспечению лучшего обслуживания клиентов и ремонта компьютеров, доступных для вас. Когда ваш ноутбук или ПК  нуждаются в ремонте, вам не придется долго волноваться! Наши специалисты имеют опыт работы со всеми компьютерами и гаджетами, будь то ремонт домашнего или рабочего компьютера.
+                </span>
+                <ul class="block-contact__ul">
+                    <li>Microsoft Windows PC Computer Repair</li>
+                    <li>Data Recovery</li>
+                    <li>Viruses, Spyware, Adware and Ransom-ware Removal</li>
+                    <li>Cracked and Broken Laptop Screen Replacements</li>
+                    <li>Charging Issues, Charging Ports Repairs and Replacements</li>
+                    <li>Computer Tune Ups, Hardware Repair, Installations</li>
+                    <li>Printer Set Ups / Troubleshooting</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="block-contact__h2">
+                    Бесплатная
+                    <span> оценка </span>
+                </h2>
+                <p class="block-contact__p">
+                    Почени свой компьютер прям сейчас
+                </p>
+                <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                    <form action="">
+                        <div class="uk-grid uk-grid-small uk-child-width-1-2@m">
+                            <div>
+                                <input class="uk-input" type="text" placeholder="ФИО" required>
+                            </div>
+                            <div>
+                                <input class="uk-input" type="tel" placeholder="Телефон(+7)" required>
+                            </div>
+                        </div>
+                        <div class="uk-grid uk-margin-small-top">
+                            <div class="uk-width-expand">
+                                <input class="uk-input" type="email" placeholder="mail@mail.ru">
+                            </div>
+                        </div>
+                        <div class="uk-grid uk-margin-small-top">
+                            <div class="uk-width-expand">
+                                <textarea class="uk-textarea" rows="5" placeholder="Опишите ваш ремонт"></textarea>
+                            </div>
+                        </div>
+                        <div class="uk-margin-small uk-text-center">
+                            <button class="uk-button uk-button-default">Отправить заявку</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="parallax uk-section uk-section-small">
+    <div class=" uk-background-cover uk-light " uk-parallax="bgy: -200"
+         style="background-image: url('img/_src/block-bg-2.jpg');">
+        <div class="uk-container">
+            <div class="uk-grid uk-child-width-1-1@m uk-text-center">
+                <h2 class=" contact-div__h3 uk-margin-large-top">Our <span> Testimonials</span></h2>
+            </div>
+            <div class="uk-grid uk-child-width-1-1@m uk-margin-small-top">
+                <p class="parallax-p">There are many valid reasons why you should choose us to take care of your valuable device</p>
+            </div>
+            <div class="uk-grid uk-child-width-1-3@m uk-grid-small  uk-text-center">
+                <div class="reviews-block ">
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-body after">
+                        <h5 class="uk-text-left reviews-block__h5">Laptop Repair</h5>
+                        <p class="reviews-block__p">Problems I had with my laptop was sorted in very short time, reasonable price. Engineer provides good service. Recommended.</p>
+                        <span class="reviews-block__user">– Michael P. Solomon</span>
+                    </div>
+                </div>
+                <div class="reviews-block ">
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-body after">
+                        <h5 class="uk-text-left reviews-block__h5">Laptop Repair</h5>
+                        <p class="reviews-block__p">Problems I had with my laptop was sorted in very short time, reasonable price. Engineer provides good service. Recommended.</p>
+                        <span class="reviews-block__user">– Michael P. Solomon</span>
+                    </div>
+                </div>
+                <div class="reviews-block ">
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-body after">
+                        <h5 class="uk-text-left reviews-block__h5">Laptop Repair</h5>
+                        <p class="reviews-block__p">Problems I had with my laptop was sorted in very short time, reasonable price. Engineer provides good service. Recommended.</p>
+                        <span class="reviews-block__user">– Michael P. Solomon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="modal">
+    <div id="modal-close-default" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <h4 class="uk-text-center contact-div__h3">Закажите ремонт <span>прямо сейчас!</span></h4>
+            <form class="">
+                <div class="modal-contact">
+                    <div class="uk-container">
+                        <form action="">
+                            <div class="uk-grid uk-grid-small uk-child-width-1-2@m">
+                                <div>
+                                    <input class="uk-input" type="text" placeholder="ФИО" required>
+                                </div>
+                                <div>
+                                    <input class="uk-input" type="tel" placeholder="Телефон(+7)" required>
+                                </div>
+                            </div>
+                            <div class="uk-grid uk-margin-small-top">
+                                <div class="uk-width-expand">
+                                    <input class="uk-input" type="email" placeholder="mail@mail.ru">
+                                </div>
+                            </div>
+                            <div class="uk-grid uk-margin-small-top">
+                                <div class="uk-width-expand">
+                                    <textarea class="uk-textarea" rows="5" placeholder="Опишите ваш ремонт"></textarea>
+                                </div>
+                            </div>
+                            <div class="uk-margin-small uk-text-center">
+                                <button class="uk-button uk-button-default">Отправить заявку</button>
+                            </div>
                         </form>
+
                     </div>
                 </div>
-                <div class="uk-navbar-right">
-                    <ul class="uk-navbar-nav">
-                        <li><a href="#" data-uk-icon="icon:user" title="Your profile" data-uk-tooltip></a></li>
-                        <li><a href="#" data-uk-icon="icon: settings" title="Settings" data-uk-tooltip></a></li>
-                        <li><a href="#" data-uk-icon="icon:  sign-out" title="Sign Out" data-uk-tooltip></a></li>
-                        <li><a class="uk-navbar-toggle" data-uk-toggle data-uk-navbar-toggle-icon href="#offcanvas-nav" title="Offcanvas" data-uk-tooltip></a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <!--/HEADER-->
-    <!-- LEFT BAR -->
-    <aside id="left-col" class="uk-light uk-visible@m">
-        <div class="left-logo uk-flex uk-flex-middle">
-
-        </div>
-        <div class="left-content-box  content-box-dark">
-            <img src="img/logo_main.png" alt="" class="uk-border-circle profile-img">
-            <h4 class="uk-text-center uk-margin-remove-vertical text-light">admin Бажова 11</h4>
-
-            <div class="uk-position-relative uk-text-center uk-display-block">
-                <a href="#" class="uk-text-small uk-text-muted uk-display-block uk-text-center" data-uk-icon="icon: triangle-down; ratio: 0.7">Admin</a>
-                <!-- user dropdown -->
-                <div class="uk-dropdown user-drop" data-uk-dropdown="mode: click; pos: bottom-center; animation: uk-animation-slide-bottom-small; duration: 150">
-                    <ul class="uk-nav uk-dropdown-nav uk-text-left">
-                        <li><a href="#"><span data-uk-icon="icon: info"></span> Summary</a></li>
-                        <li><a href="#"><span data-uk-icon="icon: refresh"></span> Edit</a></li>
-                        <li><a href="#"><span data-uk-icon="icon: settings"></span> Configuration</a></li>
-                        <li class="uk-nav-divider"></li>
-                        <li><a href="#"><span data-uk-icon="icon: image"></span> Your Data</a></li>
-                        <li class="uk-nav-divider"></li>
-                        <li><a href="#"><span data-uk-icon="icon: sign-out"></span> Sign Out</a></li>
-                    </ul>
-                </div>
-                <!-- /user dropdown -->
-            </div>
-        </div>
-
-        <div class="left-nav-wrap">
-            <ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav>
-                <li class="uk-nav-header">ACTIONS</li>
-                <li><a href="#"><span data-uk-icon="icon: comments" class="uk-margin-small-right"></span>Messages</a></li>
-                <li><a href="#"><span data-uk-icon="icon: users" class="uk-margin-small-right"></span>Friends</a></li>
-                <li class="uk-parent"><a href="#"><span data-uk-icon="icon: thumbnails" class="uk-margin-small-right"></span>Rooms</a>
-                    <ul class="uk-nav-sub">
-                        <li><a href="#">Ipsum Dolor</a></li>
-                        <li><a href="#">Officia deserunt</a></li>
-                        <li><a href="#">Duis aute irure</a></li>
-                        <li><a href="#">Ut enim ad minim</a></li>
-                    </ul>
-                </li>
-                <li><a href="#"><span data-uk-icon="icon: album" class="uk-margin-small-right"></span>Albums</a></li>
-                <li><a href="#"><span data-uk-icon="icon: thumbnails" class="uk-margin-small-right"></span>Featured Content</a></li>
-                <li><a href="#"><span data-uk-icon="icon: lifesaver" class="uk-margin-small-right"></span>Tips</a></li>
-                <li class="uk-parent">
-                    <a href="#"><span data-uk-icon="icon: comments" class="uk-margin-small-right"></span>Reports</a>
-                    <ul class="uk-nav-sub">
-                        <li><a href="#">Sub item</a></li>
-                        <li><a href="#">Sub item</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="left-content-box uk-margin-top">
-
-                <h5>Daily Reports</h5>
-                <div>
-                    <span class="uk-text-small">Traffic <small>(+50)</small></span>
-                    <progress class="uk-progress" value="50" max="100"></progress>
-                </div>
-                <div>
-                    <span class="uk-text-small">Income <small>(+78)</small></span>
-                    <progress class="uk-progress success" value="78" max="100"></progress>
-                </div>
-                <div>
-                    <span class="uk-text-small">Feedback <small>(-12)</small></span>
-                    <progress class="uk-progress warning" value="12" max="100"></progress>
-                </div>
-
-            </div>
-
-        </div>
-        <div class="bar-bottom">
-            <ul class="uk-subnav uk-flex uk-flex-center uk-child-width-1-5" data-uk-grid>
-                <li>
-                    <a href="#" class="uk-icon-link" data-uk-icon="icon: home" title="Home" data-uk-tooltip></a>
-                </li>
-                <li>
-                    <a href="#" class="uk-icon-link" data-uk-icon="icon: settings" title="Settings" data-uk-tooltip></a>
-                </li>
-                <li>
-                    <a href="#" class="uk-icon-link" data-uk-icon="icon: social"  title="Social" data-uk-tooltip></a>
-                </li>
-
-                <li>
-                    <a href="#" class="uk-icon-link" data-uk-tooltip="Sign out" data-uk-icon="icon: sign-out"></a>
-                </li>
-            </ul>
-        </div>
-    </aside>
-    <!-- /LEFT BAR -->
-    <!-- CONTENT -->
-    <div id="content" data-uk-height-viewport="expand: true">
-        <div class="uk-container uk-container-expand">
-            <div class="uk-grid uk-grid-divider uk-grid-medium uk-child-width-1-2 uk-child-width-1-4@l uk-child-width-1-5@xl" data-uk-grid>
-                <div>
-                    <span class="uk-text-small"><span data-uk-icon="icon:users" class="uk-margin-small-right text-main"></span>Новые обращения</span>
-                    <h1 class="uk-heading-primary uk-margin-remove  text-main">12.134</h1>
-                    <div class="uk-text-small">
-                        <span class="uk-text-success" data-uk-icon="icon: triangle-up">15%</span> за поледнюю неделю.
-                    </div>
-                </div>
-                <div>
-
-                    <span class="uk-text-small"><span data-uk-icon="icon:social" class="uk-margin-small-right text-main"></span>Просмотренно</span>
-                    <h1 class="uk-heading-primary uk-margin-remove text-main">6000</h1>
-                    <div class="uk-text-small">
-                        <span class="uk-text-success" data-uk-icon="icon: triangle-up">2%</span> за поледнюю неделю.
-                    </div>
-
-                </div>
-                <div>
-
-                    <span class="uk-text-small"><span data-uk-icon="icon:clock" class="uk-margin-small-right text-main"></span>Трафик посещения</span>
-                    <h1 class="uk-heading-primary uk-margin-remove text-main">14.00<small class="uk-text-small">Дня</small></h1>
-                    <div class="uk-text-small">
-                        <span class="uk-text-success" data-uk-icon="icon: triangle-up"> 2%</span> за последнюю неделю.
-                    </div>
-
-                </div>
-                <div>
-
-                    <span class="uk-text-small"><span data-uk-icon="icon:tag" class="uk-margin-small-right text-main"></span>Обработанные</span>
-                    <h1 class="uk-heading-primary uk-margin-remove text-main">1.543</h1>
-                    <div class="uk-text-small">
-                        <span class="uk-text-danger" data-uk-icon="icon: triangle-down"> -13%</span> за последнюю неделю.
-                    </div>
-
-                </div>
-                <div class="uk-visible@xl">
-                    <span class="uk-text-small"><span data-uk-icon="icon:users" class="uk-margin-small-right text-main"></span>Lorem ipsum</span>
-                    <h1 class="uk-heading-primary uk-margin-remove text-main">5.284</h1>
-                    <div class="uk-text-small">
-                        <span class="uk-text-success" data-uk-icon="icon: triangle-up"> 7%</span> more than last week.
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="uk-grid uk-grid-medium" data-uk-grid>
-
-                <!-- panel -->
-                <div class="uk-width-1-2@l">
-                    <div class="uk-card uk-card-default uk-card-small uk-card-hover">
-                        <div class="uk-card-header">
-                            <div class="uk-grid uk-grid-small">
-                                <div class="uk-width-auto"><h4>Отправленно</h4></div>
-                                <div class="uk-width-expand uk-text-right panel-icons">
-                                    <a href="#" class="uk-icon-link" title="Move" data-uk-tooltip data-uk-icon="icon: move"></a>
-                                    <a href="#" class="uk-icon-link" title="Configuration" data-uk-tooltip data-uk-icon="icon: cog"></a>
-                                    <a href="#" class="uk-icon-link" title="Close" data-uk-tooltip data-uk-icon="icon: close"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="uk-card-body">
-                            <div class="chart-container">
-                                <canvas id="chart2"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /panel -->
-                <!-- panel -->
-                <div class="uk-width-1-2@l">
-                    <div class="uk-card uk-card-default uk-card-small uk-card-hover">
-                        <div class="uk-card-header">
-                            <div class="uk-grid uk-grid-small">
-                                <div class="uk-width-auto"><h4>Общий график работ</h4></div>
-                                <div class="uk-width-expand uk-text-right panel-icons">
-                                    <a href="#" class="uk-icon-link" title="Move" data-uk-tooltip data-uk-icon="icon: move"></a>
-                                    <a href="#" class="uk-icon-link" title="Configuration" data-uk-tooltip data-uk-icon="icon: cog"></a>
-                                    <a href="#" class="uk-icon-link" title="Close" data-uk-tooltip data-uk-icon="icon: close"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="uk-card-body">
-                            <div class="chart-container">
-                                <canvas id="chart1"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /panel -->
-                <!--table-->
-                <div class="uk-width-1-1@m">
-                    <table class="uk-table uk-table-justify uk-table-divider">
-                        <thead>
-                        <tr>
-                            <th class="uk-width-small">Отметка времени</th>
-                            <th>Ваш Филиал</th>
-                            <th>Автор обращения (Ф.И.О.)</th>
-                            <th>Контактный телефон (мобильный без тире и пробелов)</th>
-                            <th>Тип проблемы</th>
-                            <th>Описание проблемы (опишите суть проблемы, количество и т.д.)</th>
-                            <th>Фото (прикрепите фото проблемы)</th>
-                            <th>Что сделано/План</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Table Data</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-                            <td><button class="uk-button uk-button-default" type="button">Button</button></td>
-                        </tr>
-                        <tr>
-                            <td>Table Data</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-                            <td><button class="uk-button uk-button-default" type="button">Button</button></td>
-                        </tr>
-                        <tr>
-                            <td>Table Data</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-                            <td><button class="uk-button uk-button-default" type="button">Button</button></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!--/table-->
-            </div>
-            <footer class="uk-section uk-section-small uk-text-center">
-
-            </footer>
+            </form>
         </div>
     </div>
-    <!-- /CONTENT -->
-    <!-- OFFCANVAS -->
-    <div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: true">
-        <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
-            <button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close></button>
-            <ul class="uk-nav uk-nav-default">
-                <li class="uk-active"><a href="#">Active</a></li>
-                <li class="uk-parent">
-                    <a href="#">Parent</a>
-                    <ul class="uk-nav-sub">
-                        <li><a href="#">Sub item</a></li>
-                        <li><a href="#">Sub item</a></li>
-                    </ul>
-                </li>
-                <li class="uk-nav-header">Header</li>
-                <li><a href="#js-options"><span class="uk-margin-small-right uk-icon" data-uk-icon="icon: table"></span> Item</a></li>
-                <li><a href="#"><span class="uk-margin-small-right uk-icon" data-uk-icon="icon: thumbnails"></span> Item</a></li>
-                <li class="uk-nav-divider"></li>
-                <li><a href="#"><span class="uk-margin-small-right uk-icon" data-uk-icon="icon: trash"></span> Item</a></li>
-            </ul>
-            <h3>Title</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-    </div>
+</section>
 
-    <!-- /OFFCANVAS -->
-</div>
+<script src="js/scripts.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit-icons.min.js"></script>
 
-<script src="/main.429642953db46e5f0128.js?e6660e8198f0a92924f5"></script>
 </body>
 </html>
